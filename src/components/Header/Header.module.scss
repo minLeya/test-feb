@@ -1,0 +1,102 @@
+@import "../../styles/variables";
+
+.header {
+  background-color: $white !important;
+  position: sticky;
+  top: 0;
+  z-index: 1100;
+  box-shadow: none !important;
+
+  .toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 80px;
+    padding: 0 20px;
+
+    @include respond-to(desktop) {
+      padding: 0 40px;
+      min-height: 90px;
+    }
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+
+    img {
+      height: 32px;
+      width: auto;
+      display: block;
+
+      @include respond-to(desktop) {
+        height: 40px;
+      }
+    }
+  }
+
+  .desktopMenu {
+    display: none;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    align-items: center;
+    gap: 48px;
+
+    @include respond-to(desktop) {
+      display: flex;
+    }
+
+    .navLink {
+      color: $medium-gray;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 1.2;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      transition: color 0.2s ease;
+      white-space: nowrap;
+
+      &:hover {
+        color: $orange;
+      }
+    }
+  }
+
+  .phoneLink {
+    display: none;
+    color: $blue;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    white-space: nowrap;
+    transition: opacity 0.2s ease;
+
+    @include respond-to(desktop) {
+      display: block;
+    }
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  .menuButton {
+    display: flex;
+    width: 48px;
+    height: 48px;
+    background-color: $blue !important;
+    color: $white !important;
+    border-radius: 0 !important;
+    padding: 0;
+    margin: 0;
+
+    @include respond-to(desktop) {
+      display: none;
+    }
+  }
+}
