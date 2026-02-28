@@ -2,13 +2,14 @@
 
 .mobileMenu {
   position: fixed;
-  top: 80px;
+  top: 96px;
   left: 0;
   right: 0;
   background: $white;
   z-index: 1090;
-  padding: 20px 0;
+  padding: 8px 16px;
   border-top: 1px solid rgba($medium-gray, 0.2);
+  height: 245px;
 
   @include respond-to(desktop) {
     display: none;
@@ -21,37 +22,30 @@
     text-align: right;
 
     li {
-      margin-bottom: 8px;
-
       a {
         display: block;
         color: $medium-gray;
         text-decoration: none;
         font-size: 18px;
         font-weight: 600;
-        line-height: 69px;
+        line-height: 45px;
         letter-spacing: 0.02em;
         padding: 0;
-        border-bottom: 1px solid rgba($medium-gray, 0.2);
-        transition: color 0.2s ease;
 
         &:hover,
         &:active {
-          color: $orange;
+          color: $blue;
         }
       }
     }
 
     .mobilePhone {
-      margin-top: 24px;
-
       a {
         color: $blue;
         border-bottom: none;
-        font-size: 18px;
-        line-height: 1.2;
+        font-size: 24px;
+        font-weight: 700;
         text-transform: none;
-        display: inline-block;
 
         &:hover {
           opacity: 0.8;
@@ -59,4 +53,15 @@
       }
     }
   }
+}
+
+.overlay {
+  position: fixed;
+  top: 96px; // начинается после хедера
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px); // эффект блюра
+  z-index: 1080; // ниже меню (1090) но выше контента
 }

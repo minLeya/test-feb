@@ -32,7 +32,7 @@
   .leftColumn {
     flex: 0 0 auto;
     width: 100%;
-    margin-bottom: 24px; // отступ между картинкой и текстом на мобилке
+    margin-bottom: 24px;
 
     @include respond-to(desktop) {
       width: 480px;
