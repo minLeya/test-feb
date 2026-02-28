@@ -33,7 +33,6 @@ const Header = () => {
               +7 (800) 999-99-99
             </a>
 
-            {/* Одна кнопка, которая меняет иконку */}
             <IconButton
               className={styles.menuButton}
               onClick={handleMobileMenuToggle}

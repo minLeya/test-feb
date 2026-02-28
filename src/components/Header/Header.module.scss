@@ -1,37 +1,35 @@
-@import "../../styles/variables";
+@use "../../styles/variables" as *;
 
 .header {
   background-color: $white !important;
-  position: sticky;
   top: 0;
   z-index: 1100;
   box-shadow: none !important;
+  height: 96px;
 
   .toolbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    min-height: 80px;
-    padding: 0 20px;
+    height: 96px;
+    padding: 8px 16px;
 
     @include respond-to(desktop) {
-      padding: 0 40px;
-      min-height: 90px;
+      padding: 8px 128px;
     }
   }
 
   .logo {
     display: flex;
     align-items: center;
-    text-decoration: none;
 
     img {
-      height: 32px;
-      width: auto;
+      height: 48px;
+      width: 160px;
       display: block;
 
       @include respond-to(desktop) {
-        height: 40px;
+        height: 48px;
       }
     }
   }
@@ -46,21 +44,19 @@
 
     @include respond-to(desktop) {
       display: flex;
+      width: 348px;
     }
 
     .navLink {
       color: $medium-gray;
       text-decoration: none;
-      font-size: 16px;
+      font-size: 18px;
       font-weight: 600;
-      line-height: 1.2;
-      letter-spacing: 0.02em;
-      text-transform: uppercase;
       transition: color 0.2s ease;
       white-space: nowrap;
 
       &:hover {
-        color: $orange;
+        color: $blue;
       }
     }
   }
@@ -69,12 +65,12 @@
     display: none;
     color: $blue;
     text-decoration: none;
-    font-size: 16px;
-    font-weight: 600;
-    line-height: 1.2;
-    letter-spacing: 0.02em;
     white-space: nowrap;
     transition: opacity 0.2s ease;
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 24px;
+    line-height: 1em;
 
     @include respond-to(desktop) {
       display: block;
