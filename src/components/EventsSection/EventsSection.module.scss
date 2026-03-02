@@ -1,0 +1,42 @@
+@use '../../styles/variables' as *;
+
+.eventsSection {
+  padding: 40px 0;
+  background-color: $light-gray;
+
+  @include respond-to(desktop) {
+    padding: 60px 128px; 
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  max-width: 1184px;
+  margin: 0 auto;
+
+  @include respond-to(desktop) {
+    flex-direction: row;
+    gap: 48px;
+    align-items: flex-start; 
+  }
+}
+
+.calendar {
+  width: 100%;
+
+  @include respond-to(desktop) {
+    max-width: 480px; 
+  }
+}
+
+.eventList {
+  max-width: 656px;
+  flex: 1;
+  min-width: 0;
+  
+  @include respond-to(desktop) {
+    margin-top: 41px;
+  }
+}

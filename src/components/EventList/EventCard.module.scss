@@ -1,0 +1,130 @@
+@use "../../styles/variables" as *;
+
+.eventCard {
+  padding: 20px;
+  background: $white;
+  width: 100%;
+  margin: 0 24px;
+  width: calc(100% - 48px);
+  box-sizing: border-box;
+
+  @include respond-to(desktop) {
+    padding: 24px;
+    margin: 0;
+    width: 656px;
+    max-width: 656px;
+    max-height: 287px;
+    min-height: 249px;
+    max-height: 287px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.eventTitle {
+  font-size: 16px;
+  font-weight: 600;
+  color: $dark-blue;
+  margin: 0 0 16px 0;
+  line-height: 1.5;
+
+  @include respond-to(desktop) {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+}
+
+.tagsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 20px;
+
+  @include respond-to(desktop) {
+    gap: 5px;
+    margin-bottom: 24px;
+  }
+}
+
+.tag {
+  background: $light-blue;
+  padding: 4px 12px;
+  border-radius: 4px;
+  color: $blue;
+  font-size: 16px;
+  font-weight: 400;
+  height: 22px;
+  display: inline-flex;
+  align-items: center;
+
+  @include respond-to(desktop) {
+    font-size: 14px;
+    padding: 6px 14px;
+    border-radius: 4px;
+    height: 30px;
+  }
+}
+
+.eventActions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: auto;
+
+  @include respond-to(desktop) {
+    flex-direction: row;
+    gap: 12px;
+  }
+}
+
+.writeButton {
+  padding: 10px;
+  background: transparent;
+  color: $blue;
+  border: 1px solid $blue;
+  font-size: 16px;
+  font-weight: 400;
+  cursor: pointer;
+  transition: all 0.2s;
+  width: 100%;
+
+  @include respond-to(desktop) {
+    padding: 10px 24px;
+    width: 151px;
+    max-width: 151px;
+  }
+
+  &:hover {
+    background: $light-blue;
+  }
+}
+
+.detailsButton {
+  padding: 10px;
+  padding-right: 48px;
+  padding-left: 32px;
+  background: $blue;
+  color: $white;
+  border: none;
+  font-size: 16px;
+  font-weight: 400;
+  cursor: pointer;
+  width: 100%;
+  position: relative;
+  height: 48px;
+
+  border-bottom-left-radius: 16px;
+  clip-path: polygon(0 0, calc(100% - 30px) 0, 100% 25px, 100% 100%, 0 100%);
+
+  @include respond-to(desktop) {
+    padding: 10px 24px;
+    width: 202px;
+    max-width: 202px;
+    font-size: 15px;
+  }
+
+  &:hover {
+    background: rgba($blue, 0.9);
+  }
+}

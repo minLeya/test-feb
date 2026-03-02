@@ -1,13 +1,10 @@
 @use "../../styles/variables" as *;
 
 .slideSection {
-  margin: 15px;
-  
+  padding-top: 20px;
   @include respond-to(desktop) {
-    padding: 48px 128px;
-    max-width: 1440px;
-    margin: 0 auto;
-    width: 100%;
+    margin: 48px 128px;
+    padding-top: 0;
   }
 
   .content {
@@ -20,12 +17,8 @@
 
     @include respond-to(desktop) {
       flex-direction: row;
-      gap: 10px;
       align-items: center;
-      padding: 0;
-      max-width: 1184px;
-      margin: 0 auto;
-      width: 100%;
+
     }
   }
 

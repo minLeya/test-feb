@@ -1,0 +1,215 @@
+@use "../../styles/variables" as *;
+
+.calendar {
+  width: 100%;
+  background: $light-gray;
+  padding: 0 24px;
+  @include respond-to(desktop) {
+    max-width: 480px;
+    padding: 0;
+  }
+}
+
+.eventsHeader {
+  margin-bottom: 20px;
+  
+  @include respond-to(desktop) {
+    margin-bottom: 24px;
+  }
+}
+
+.eventsTitle {
+  color: $dark-blue;
+  margin: 0;
+  font-size: 24px;
+  font-weight: 700;
+  font-style: italic;
+  white-space: nowrap;
+
+  @include respond-to(desktop) {
+    font-size: 32px;
+  }
+}
+
+.highlightedDate {
+  background-color: $orange;
+  color: $white;
+  padding: 0 2px;
+}
+
+.calendarInner {
+  background: $light-gray;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.monthBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: $blue;
+  padding: 12px 20px;
+  margin-bottom: 24px;
+  border-radius: 0;
+  width: 100%;
+  box-sizing: border-box;
+
+  @include respond-to(desktop) {
+    margin-bottom: 28px;
+    height: 48px;
+    padding: 12px 24px;
+  }
+}
+
+.iconMonth {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  justify-content: center;
+  align-items: center;
+}
+
+.calendarIcon {
+  height: 20px;
+  width: 20px;
+  
+  @include respond-to(desktop) {
+    height: 24px;
+    width: 24px;
+  }
+}
+
+.monthText {
+  font-size: 18px;
+  font-weight: 400;
+  color: $white;
+  line-height: 24px;
+
+  @include respond-to(desktop) {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 28px;
+  }
+}
+
+.navButton {
+  width: 32px;
+  height: 32px;
+  border: none;
+  background-color: $blue;
+  border-radius: 0;
+  cursor: pointer;
+  font-size: 20px;
+  color: $white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+
+
+  @include respond-to(desktop) {
+    width: 40px;
+    height: 40px;
+    font-size: 24px;
+  }
+}
+
+.desktopOnly {
+  display: none;
+
+  @include respond-to(desktop) {
+    display: flex;
+  }
+}
+
+.calendarGrid {
+  width: 100%;
+  padding: 0 12px; 
+  box-sizing: border-box;
+  
+  @include respond-to(desktop) {
+    padding: 0;
+  }
+}
+
+.weekDays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
+  margin-bottom: 5px;
+  align-items: center;
+  justify-items: center;
+
+  @include respond-to(desktop) {
+    gap: 8px;
+    margin-bottom: 0;
+    padding: 0 4px;
+  }
+}
+
+.weekDay {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 400;
+  color: $medium-gray;
+  width: 100%;
+
+  @include respond-to(desktop) {
+    font-size: 18px;
+    padding: 8px 0;
+  }
+}
+
+.days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
+  align-items: center;
+  justify-items: center;
+
+  @include respond-to(desktop) {
+    gap: 8px;
+    padding: 0 4px;
+  }
+}
+
+.day {
+  position: relative;
+  aspect-ratio: 1;
+  border: none;
+  background: $white;
+  border-radius: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $dark-blue;
+  font-size: 16px;
+  font-weight: 400;
+  width: 100%;
+  height: 100%;
+  
+  @include respond-to(desktop) {
+    font-size: 18px;
+    max-width: 64px;
+    max-height: 64px;
+  }
+
+  &:hover {
+    background: $light-blue;
+  }
+
+  &.selected {
+    background: $blue;
+    color: $white;
+    border: none;
+  }
+}
+
+.emptyDay {
+  aspect-ratio: 1;
+  background: transparent;
+}

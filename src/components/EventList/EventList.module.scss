@@ -1,0 +1,139 @@
+@use '../../styles/variables' as *;
+
+.eventList {
+  flex: 1;
+  width: 100%;
+}
+
+.dateHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid $light-gray;
+
+  @include respond-to(desktop) {
+    margin-bottom: 24px;
+    padding-bottom: 16px;
+  }
+}
+
+.dateTitle {
+  font-size: 20px;
+  font-weight: 600;
+  color: $dark-blue;
+  margin: 0;
+
+  @include respond-to(desktop) {
+    font-size: 24px;
+  }
+}
+
+.eventCount {
+  font-size: 13px;
+  color: $medium-gray;
+  background: $light-gray;
+  padding: 4px 12px;
+  border-radius: 16px;
+  font-weight: 500;
+
+  @include respond-to(desktop) {
+    font-size: 14px;
+    padding: 6px 16px;
+    border-radius: 20px;
+  }
+}
+
+.tagsSection {
+  margin-bottom: 24px;
+
+  @include respond-to(desktop) {
+    margin-bottom: 32px;
+  }
+}
+
+.tagsTitle {
+  font-size: 13px;
+  font-weight: 600;
+  color: $medium-gray;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+
+  @include respond-to(desktop) {
+    font-size: 14px;
+    margin-bottom: 16px;
+  }
+}
+
+.tagsList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+
+  @include respond-to(desktop) {
+    gap: 8px;
+  }
+}
+
+.tag {
+  padding: 6px 14px;
+  border: 1px solid $light-gray;
+  background: $white;
+  border-radius: 20px;
+  font-size: 13px;
+  color: $medium-gray;
+  font-weight: 500;
+
+  @include respond-to(desktop) {
+    padding: 8px 20px;
+    font-size: 14px;
+    border-radius: 30px;
+  }
+}
+
+.eventsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  @include respond-to(desktop) {
+    gap: 16px;
+  }
+}
+
+.noEvents {
+  text-align: center;
+  padding: 32px 16px;
+  background: $white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba($dark-blue, 0.05);
+
+  @include respond-to(desktop) {
+    padding: 48px 24px;
+    border-radius: 16px;
+  }
+}
+
+.noEventsText {
+  font-size: 15px;
+  font-weight: 500;
+  color: $dark-blue;
+  margin-bottom: 6px;
+
+  @include respond-to(desktop) {
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
+}
+
+.noEventsSubtext {
+  font-size: 13px;
+  color: $medium-gray;
+  margin: 0;
+
+  @include respond-to(desktop) {
+    font-size: 14px;
+  }
+}
