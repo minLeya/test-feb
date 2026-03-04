@@ -1,39 +1,46 @@
 @use "../../styles/variables" as *;
 
+.container {
+  margin: 0 16px 0 16px;
+}
+
 .applicationForm {
   width: 100%;
   background: $white;
-  padding: 24px 16px;
+  max-width: 382px;
+  max-height: 509px;
+  padding: 24px;
 
   @include respond-to(desktop) {
-    max-width: 600px;
+    max-width: 580px;
     margin: 0 auto;
-    padding: 32px 24px;
+    padding: 48px;
   }
 }
 
 .title {
-  font-size: 28px;
+  font-size: 32px;
   font-weight: 700;
   color: $dark-blue;
-  margin: 0 0 24px 0;
+  margin: 0 0 16px 0;
   font-style: italic;
 
   @include respond-to(desktop) {
     font-size: 36px;
-    margin-bottom: 32px;
+    margin-left: 128px;
   }
 }
 
 .form {
   display: flex;
   flex-direction: column;
-  gap: 20px;
-	max-width: 334px;
+  gap: 16px;
+
+  width: 100%;
 
   @include respond-to(desktop) {
     gap: 24px;
-		max-width: 484px;
+    max-width: 484px;
   }
 }
 
@@ -44,14 +51,19 @@
   gap: 16px;
   min-height: 48px;
   @include respond-to(desktop) {
-
   }
+}
+
+.genderField {
+  flex-direction: row;
+
+  align-items: center;
 }
 
 .label {
   font-size: 16px;
   font-weight: 500;
-  color: $dark-gray;
+  color: $medium-gray;
 
   @include respond-to(desktop) {
     font-size: 18px;
@@ -117,9 +129,14 @@
   width: 24px;
   height: 24px;
   background: $white;
-  border: 2px solid $light-gray;
+  border: 2px solid $blue;
   cursor: pointer;
   transition: all 0.2s;
+  box-shadow: inset 0 0 0 2px $white;
+
+  &:hover {
+    background-color: $light-blue;
+  }
 
   @include respond-to(desktop) {
     width: 24px;
@@ -163,7 +180,6 @@
   }
 
   @include respond-to(desktop) {
-
     font-size: 18px;
   }
 }
@@ -226,15 +242,13 @@
   }
 
   @include respond-to(desktop) {
-
     margin-top: 12px;
   }
 }
 
 .alternative {
   text-align: center;
-  margin: 16px 0 8px;
-
+  margin-top: 9px;
 }
 
 .alternativeText {
@@ -276,7 +290,6 @@
   justify-content: space-between;
   align-items: center;
   margin-top: 8px;
-
 }
 
 .otherButton {
