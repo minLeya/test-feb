@@ -18,6 +18,7 @@
     @include respond-to(desktop) {
       flex-direction: row;
       align-items: center;
+      width: 1184px;
 
     }
   }
