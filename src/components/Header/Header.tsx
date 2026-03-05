@@ -19,7 +19,7 @@ const Header = () => {
         <Container maxWidth="xl">
           <Toolbar disableGutters className={styles.toolbar}>
             <a href="/" className={styles.logo}>
-              <img src="/images/Logo.png" alt="Science" />
+              <img src="./images/Logo.png" alt="Science" />
             </a>
 
             <nav className={styles.desktopMenu}>

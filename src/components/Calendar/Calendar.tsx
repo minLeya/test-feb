@@ -106,7 +106,7 @@ const Calendar: React.FC<CalendarProps> = ({
 
           <div className={styles.iconMonth}>
             <div className={styles.calendarIcon}>
-              <img src="/images/calendar-icon.png" alt="calendar-icon" />
+              <img src="./images/calendar-icon.png" alt="calendar-icon" />
             </div>
             <span className={styles.monthText}>
               {monthNames[selectedDate.getMonth()]} {selectedDate.getFullYear()}

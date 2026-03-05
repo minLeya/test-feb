@@ -11,7 +11,7 @@ const SlideSection = () => {
           <div className={styles.leftColumn}>
             <div className={styles.imageWrapper}>
               <img
-                src="/images/slide-image.png"
+                src="./images/slide-image.png"
                 alt="Слайд 3"
                 className={styles.image}
               />
